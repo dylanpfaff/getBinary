@@ -1,0 +1,26 @@
+// convert decimal to binary
+
+
+var array = [];
+
+
+var getBinaryNumber = function(decimal){
+    
+    
+    var digit = decimal % 2;
+    
+    array.push(digit);
+    decimal = (decimal-digit)/2;
+    
+    if(decimal > 0){
+    getBinaryNumber(decimal);
+    }
+
+    else{
+        array.reverse();
+        array.join("");
+        println(array);
+    }
+};
+    
+// call me maybe? </3
